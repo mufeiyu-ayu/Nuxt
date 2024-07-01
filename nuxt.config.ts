@@ -1,8 +1,12 @@
 export default defineNuxtConfig({
+  // app: {
+  //   head: {
+  //     link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }]
+  //   },
+  //   layoutTransition: { name: 'layout', mode: 'out-in' }
+  // },
   app: {
-    head: {
-      link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }]
-    }
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   css: ['~/assets/style.scss'],
   modules: ['@nuxtjs/tailwindcss'],

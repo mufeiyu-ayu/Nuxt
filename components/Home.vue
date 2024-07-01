@@ -8,6 +8,11 @@ const getDataHandle =async()=>{
 
 <template>
   <div class="main">this is a home component111</div>
-  <button @click="getDataHandle"> 点击获取数据</button>
+  <div>
+    <button @click="getDataHandle"> 点击获取数据</button>
+  </div>
+  <div>
+      <button @click="$router.push('/')"> 路由跳转</button>
+  </div>
   <div>name-{{title  }}</div>
 </template>

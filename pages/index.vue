@@ -1,15 +1,13 @@
-<script setup lang="ts">
-definePageMeta({
-  layout: false,
-})
+<script setup lang=ts>
+const useColor = () => useState<string>('color', () => 'pink')
+const color = useColor()
+console.log(color,'color');
 </script>
-
 <template>
   <div>
-    <NuxtLayout name="default">
-      <template #header> Some header template content.</template>
-
-      The rest of the page
-    </NuxtLayout>
+    <h1>Home page</h1>
+    <div>color:{{color}}</div>
+     <button @click="color='red'">change</button>
+    <NuxtLink to="/about">About page</NuxtLink>
   </div>
 </template>
