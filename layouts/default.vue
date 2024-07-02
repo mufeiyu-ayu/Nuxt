@@ -1,12 +1,12 @@
 <template>
   <div>
-    <pre>default layout</pre>
-    <slot />
+    <app-header>
+
+    </app-header>
+    <slot></slot>
   </div>
 </template>
 
 <style scoped>
-div {
-  background-color: lightgreen;
-}
+
 </style>
