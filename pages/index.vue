@@ -1,13 +1,28 @@
-<script setup lang=ts>
-const useColor = () => useState<string>('color', () => 'pink')
+<script lang="ts" setup>
+const count = useCounter()
 const color = useColor()
-console.log(color,'color');
+const router = useRouter()
+const utilsCou = utilsCount()
+const handleClick = () => {
+  console.log(utilsCou, 'utilsCou')
+  router.push('/about')
+}
 </script>
+
 <template>
   <div>
-    <h1>Home page</h1>
-    <div>color:{{color}}</div>
-     <button @click="color='red'">change</button>
-    <NuxtLink to="/about">About page</NuxtLink>
+    <h1>Counter: {{ count }}</h1>
+    <h1>Color:{{ color }}</h1>
+    <button @click="count++">+</button><br />
+    <button @click="count--">-</button><br />
+    <button @click="color = 'red'">changeColor</button><br />
+  </div>
+  <div>
+    <button @click="handleClick">to about</button>
+  </div>
+  <div>
+    <Happy />
   </div>
 </template>
+
+<style scoped></style>

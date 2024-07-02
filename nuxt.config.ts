@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   //   layoutTransition: { name: 'layout', mode: 'out-in' }
   // },
   app: {
-    layoutTransition: { name: 'layout', mode: 'out-in' }
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
   css: ['~/assets/style.scss'],
   modules: ['@nuxtjs/tailwindcss'],
@@ -14,9 +14,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/validate.scss" as *;' 
-        }
-      }
-    }
-  }
+          additionalData: '@use "~/assets/validate.scss" as *;',
+        },
+      },
+    },
+  },
+  extends: ['./custom'],
 })
